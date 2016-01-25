@@ -161,18 +161,13 @@ each(names, function(item, indice){
 
 
 var getUserById = function (arr, id, cb) {
-  // for (var i = 0; i < arr.length; i++){
-  //   if (arr[i] === id) {
-  //     var object = arr[i];
-  for (var key in arr) {
-    if(arr[key] === id) {
-      var object = arr[key];
-      // arr.forEach(function(object) {
-      cb(object);
-      });
-    // }
+  for (var i = 0; i < arr.length; i++) {
+    if(arr[i].id === id) {
+      cb(arr[i]);
+    }
   }
-};
+}
+
 
 var users = [
   {
